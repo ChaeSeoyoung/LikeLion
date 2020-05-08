@@ -1,0 +1,12 @@
+x=1
+y=1
+x+y
+x=1000
+x+y
+1=2;
+variable vs constant
+alert("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+name='egoing';
+alert("ABCDEFGH" + name + "IJKLMNO" + name + "PQRSTUVWXYZ")
+var name='leezche';
+alert("ABCDEFGH" + name + "IJKLMNO" + name + "PQRSTUVWXYZ")
