@@ -18,21 +18,6 @@
         a{
             color:black;
         }
-        div {
-            width: 100%;
-            height: 300px;
-            border: 5px solid #000;
-        }
-        div.left {
-            width: 50%;
-            float: left;
-            box-sizing: border-box;
-        }
-        div.right {
-            width: 50%;
-            float: right;
-            box-sizing: border-box;
-        }
         #grid{
             padding:10px;
         }
@@ -48,14 +33,55 @@
         <li role="presentation"><a href="1.html">News</a></li>
         <li role="presentation"><a href="ms.html">Bingo</a></li>
     </ul>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="ost.png" alt="...">
+            <div class="caption">
+                <h3>타조</h3>
+                <p>타조 눈이 슬퍼보이네요...</p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button" onclick="alert('타조 귀엽죠?')">좋아요</a>
+                    <a href="#" class="btn btn-default" role="button" onclick="alert('또한 과제의 늪에서 벗어날 수 없을 것이다...')">시러요</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
     
-    <div class="left" id="grid">
-        <h3>오늘의 뉴스</h3>
-        <ol>
-          <li><a href="1.html">[속보] 성대 멋사에 들어온 비밀의...</a></li>
-          <li><a href="2.html">[속보] 멋사, 2020 새 부원 영입해, "충격"...</a></li>
-        </ol>
-        <img src="./ost.png" width="200" height="170">
+    <h2 class="text-center">Assignment progress</h2>
+    <h3 class="text-center">- Work harder~! -</h3>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+            100%
+        </div>
     </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+            100%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+            100%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+            40%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            0%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            0%
+        </div>
+    </div>
+    
 </body>
 </html>
