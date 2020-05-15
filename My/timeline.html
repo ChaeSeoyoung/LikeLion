@@ -7,18 +7,27 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
 </head>
+<style type="text/css"> 
+    a { text-decoration:none } 
+</style> 
 <body>
     <div id="title">
-        <h1>‍💻Resume💻</h1>
+        <a href="timeline.html"><h1>‍💻Resume💻</h1></a>
     </div>
     <div class="buttons">
         <button class="changebg" onclick="
-        document.querySelector('body').style.backgroundImage='url(day.jpg)';
-        documnet.querySelector('body').style.backgroundSize='cover';
+        var target = document.querySelector('body');
+        var h = document.querySelector('h1');
+        target.style.backgroundImage='url(day.jpg)';
+        target.style.backgroundSize='cover';
+        h.style.color='black';
         ">Sky</button>
         <button class="changebg" onclick="
-        document.querySelector('body').style.backgroundImage='url(aurora.jpg)';
-        documnet.querySelector('body').style.backgroundSize='cover';
+        var target = document.querySelector('body');
+        var h = document.querySelector('h1');
+        target.style.backgroundImage='url(aurora.jpg)';
+        target.style.backgroundSize='cover';
+        h.style.color='white';
         ">Aurora</button>
     </div>
     <div class="content">
