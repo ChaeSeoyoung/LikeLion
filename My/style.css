@@ -1,0 +1,113 @@
+
+#title{
+    text-align: center;
+    font-size:50px;
+}
+body{
+    background-color: rgb(224, 234, 238);
+}
+h1{
+    color: rgb(79, 188, 228);
+    font-family: "배달의민족 주아";
+    text-shadow: rgb(31, 49, 87) 2px 2px 4px;
+}
+.content{
+    padding:0 10%;
+    margin: 10%;
+}
+img{
+    position:relative;
+    width: 100px;
+    grid-column: 1;
+    top:-50px;
+    left:-30px;
+    z-index: 10;
+    width: auto; height: auto;
+    max-width: 105px;
+    max-height: 105px;
+}
+.card{
+    position:relative;
+    display: grid;
+    grid-template-columns: 60px auto 30px;
+    background-color: rgb(101, 157, 179);
+    width:40%;
+    margin-bottom: 10%;
+    line-height: 1.5;
+    border-radius: 5%;
+    transition: 0.2s;
+}
+
+.card:hover{
+    background-color: rgb(18, 51, 65);
+    box-shadow: none;
+    color: white;
+}
+
+.date{
+    position:relative;
+    grid-column: 2;
+    top:-20px;
+    font-family: 'Black Han Sans', cursive;
+    font-size: 30px;
+    height: 35px;
+    padding-left: 20px;
+    background-color: rgb(136, 181, 204);
+    z-index: 5;
+    box-shadow: rgb(31, 49, 87) 5px 5px 10px;
+}
+.what, .where, .text{
+    position:relative;
+    grid-column: 2;
+    top: -20px;
+    font-family: "배달의민족 주아";
+    font-size: 30px;
+}
+.dot{
+    width:50px;
+    height:50px;
+    background-color: rgb(34, 65, 100);
+    position:absolute;
+    border-radius:75px;
+    right:-25%;
+    top:40%;
+}
+.line{
+    position:absolute;
+    top:40%;
+    left:50%;
+    margin-left:-2.5px;
+    width:5px;
+    height:220%;
+    background-color: rgb(34, 65, 100);
+}
+.card:nth-child(even){
+    margin-left:60%;
+}
+
+.card:nth-child(even) .dot{
+    left:-25%;
+}
+.buttons{
+    text-align: center;
+}
+
+#tothetop{
+    position:fixed;
+    left:0px;
+    bottom:100px;
+}
+
+@media(max-width:1000px){
+    .card{
+        width:80%;
+        margin-left: 10%;
+        margin-bottom: 10%;
+    }
+    .dot, .line{
+        display:none;
+    }
+    .card:nth-child(even){
+        margin-left:10%;
+    }
+}
