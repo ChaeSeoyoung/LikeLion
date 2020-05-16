@@ -14,26 +14,40 @@
     <div id="title">
         <a href="timeline.html"><h1>‍💻Resume💻</h1></a>
     </div>
+    
     <div class="buttons">
+        
         <button class="changebg" onclick="
         var target = document.querySelector('body');
         var h = document.querySelector('h1');
+        var a = document.querySelectorAll('.dot');
+        var i = 0;
         target.style.backgroundImage='url(day.jpg)';
         target.style.backgroundSize='cover';
         h.style.color='black';
         document.querySelector('.line').style.background='rgb(34, 65, 100)';
-        document.querySelector('.dot').style.background='rgb(34, 65, 100)';
+        while(i < a.length){
+            a[i].style.background='rgb(34, 65, 100)';
+            i++;
+        }
         ">Sky</button>
         <button class="changebg" onclick="
         var target = document.querySelector('body');
         var h = document.querySelector('h1');
+        var a = document.querySelectorAll('.dot');
+        var i = 0;
         target.style.backgroundImage='url(aurora.jpg)';
         target.style.backgroundSize='cover';
         h.style.color='white';
         document.querySelector('.line').style.background='white';
-        document.querySelector('.dot').style.background='white';
+        while(i < a.length){
+            a[i].style.background='white';
+            i++;
+        }
         ">Aurora</button>
+    
     </div>
+   
     <div class="content">
         <div class="card">
             <img src='C.png'>
