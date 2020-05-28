@@ -1,0 +1,24 @@
+
+<script  language="Javascript">
+    var goodURL  = "assign1.html"
+        alert("패스워드를 입력하세요.")
+    
+    var password =  prompt("PASSWD: ","")
+    
+        if(password == null)  {
+            alert("바이루~");
+            history.back();
+        }else{
+            var combo = password;
+            var pw = combo.toLowerCase();
+    
+        if(pw == "hi"){
+            alert("환영합니다^^");
+            location = goodURL;
+        }
+        else{
+            alert("바이루~");
+            history.back();
+        }
+    }
+</script>
