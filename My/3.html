@@ -22,7 +22,14 @@
             width:600px;
             height:250px;
             line-height:250px;
-            color:#666;
+            font-size:100px;
+            text-align:center;
+        }
+        #timer{
+            border:1px solid #dedede;
+            width:600px;
+            height:250px;
+            line-height:250px;
             font-size:100px;
             text-align:center;
         }
@@ -31,6 +38,8 @@
         }
     </style>
     <script type="text/javascript">
+
+        //clock
         function startTime() {
             var today = new Date();
             var h = today.getHours();
@@ -38,8 +47,7 @@
             var s = today.getSeconds();
             m = checkTime(m);
             s = checkTime(s);
-            document.getElementById('clock').innerHTML =
-            h + ":" + m + ":" + s;
+            document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
             var t = setTimeout(startTime, 500);
         }
         function checkTime(i) {
@@ -48,7 +56,29 @@
             };
             return i;
         }
-    </script>
+
+        var t = prompt("Timer(second)");
+        var m;
+        var s;
+
+        var x = setInterval(function(){
+			
+            var m = parseInt(t/60);
+            s = t % 60;
+            m = checkTime(m);
+            s = checkTime(s);
+
+			document.getElementById("timer").innerHTML = m + ":" + s;
+					
+			t--;
+			
+			if (t < 0) {
+				clearInterval(x);
+				document.getElementById("timer").innerHTML = "TimeOut!";
+			}
+		}, 1000);
+	</script>
+
 </head>
 
 <body onload="startTime()">
@@ -67,6 +97,7 @@
     <div id="clock"></div>
 
     <h1>⏱ Timer</h1>
+    <div id="timer"></div>
 
     <h1>⏰ StopWatch</h1>
 </body>
