@@ -17,15 +17,7 @@
             color:black;
             text-decoration: none;    
         }
-        #clock{
-            border:1px solid #dedede;
-            width:600px;
-            height:250px;
-            line-height:250px;
-            font-size:100px;
-            text-align:center;
-        }
-        #timer{
+        #clock, #timer, #stopwatch{
             border:1px solid #dedede;
             width:600px;
             height:250px;
@@ -57,26 +49,46 @@
             return i;
         }
 
-        var t = prompt("Timer(second)");
-        var m;
-        var s;
+        //timer
+        var t2 = prompt("Timer(second)");
+        var m2 = "";
+        var s2 = "";
 
         var x = setInterval(function(){
 			
-            var m = parseInt(t/60);
-            s = t % 60;
-            m = checkTime(m);
-            s = checkTime(s);
+            m2 = parseInt(t2/60);
+            s2 = t2 % 60;
+            m2 = checkTime(m2);
+            s2 = checkTime(s2);
 
-			document.getElementById("timer").innerHTML = m + ":" + s;
+			document.getElementById("timer").innerHTML = m2 + ":" + s2;
 					
-			t--;
+			t2--;
 			
-			if (t < 0) {
+			if (t2 < 0) {
 				clearInterval(x);
 				document.getElementById("timer").innerHTML = "TimeOut!";
 			}
-		}, 1000);
+        }, 1000);
+
+
+        //stopwatch
+        var t3 = "0";
+
+        var x3 = setInterval(function(){
+			
+            var m3 = parseInt(t3 / 60);
+            var s3 = t3 % 60;
+            m3 = checkTime(m3);
+            s3 = checkTime(s3);
+
+			document.getElementById("stopwatch").innerHTML = m3 + ":" + s3;
+					
+            t3++;
+            
+        }, 1000);
+        
+        
 	</script>
 
 </head>
@@ -100,6 +112,7 @@
     <div id="timer"></div>
 
     <h1>⏰ StopWatch</h1>
+    <div id="stopwatch"></div>
 </body>
 
 </html>
