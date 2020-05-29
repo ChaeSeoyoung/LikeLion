@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <title>멋사신문에 오신 걸 환영합니다!</title>
     <meta charset="utf-8">
@@ -10,73 +10,65 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <style>
         body{
-        margin:0;
+            margin:0;
+            
         }
         a {
             color:black;
             text-decoration: none;    
         }
-        div {
-            width: 100%;
-            height: 300px;
-            border: 5px solid #000;
+        #clock{
+            border:1px solid #dedede;
+            width:600px;
+            height:250px;
+            line-height:250px;
+            color:#666;
+            font-size:100px;
+            text-align:center;
         }
-        div.left {
-            width: 50%;
-            float: left;
-            box-sizing: border-box;
-            background: whitesmoke;
-        }
-        div.right {
-            width: 50%;
-            float: right;
-            box-sizing: border-box;
-            background: whitesmoke;
-        }
-        #grid{
-            padding:20px;
+        h1{
+            padding-left: 10px;
         }
     </style>
+    <script type="text/javascript">
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML =
+            h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10){
+                i = "0" + i
+            };
+            return i;
+        }
+    </script>
 </head>
 
-<body>
+<body onload="startTime()">
+
     <h1><a href="assign1.html"><p class="text-center">멋사신문</p></a></h1>
 
     <ul class="nav nav-tabs nav-justified">
         <li role="presentation"><a href="assign1.html">Home</a></li>
-        <li role="presentation" class="active"><a href="3.html">Profile</a></li>
+        <li role="presentation" class="active"><a href="3.html">Time</a></li>
         <li role="presentation"><a href="1.html">News</a></li>
         <li role="presentation"><a href="ms.html">Bingo</a></li>
         <li role="presentation"><a href="timeline.html">Timeline</a></li>
     </ul>
 
-    <div class="left" id="grid">
-        <h3>기자 프로필</h3>
-        <img src="./reporter.jpg" width="100" height="100">
-        <ol>
-            <li>이름: 채서영</li>
-            <li>나이: 할머니</li>
-            <li>직업: 대학생</li>
-            <li>이메일: csyy@never.com</li>
-        </ol>
-    </div>
-    <div class="right" id="grid">
-        <h3>기자 인터뷰 </h3>
-        <p> &nbsp;&nbsp;안녕하세요, 채서영 기자입니다.
-            근래 과제가 끝나면 또 과제가 나오고... 너무 힘드네요
-            다크서클도 더 내려오는 기분입니다
-            교수님 과제는 하나인데 문제는 왜 2개이죠
-            이것이 말로만 듣던 새끼문제인가요
-            교수님 불만이 있으면 과제 말고 말로 해주세요...
-            살려주세요..
-            <br><br>
-            살려주세요...
-            <br><br>
-            살려주세요....
-        </p>
-    </div>
+    <h1>🕐 Clock</h1>
+    <div id="clock"></div>
 
+    <h1>⏱ Timer</h1>
 
+    <h1>⏰ StopWatch</h1>
 </body>
 
 </html>
